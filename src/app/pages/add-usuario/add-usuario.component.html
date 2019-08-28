@@ -1,1 +1,32 @@
-<p>add-usuario works!</p>
+<section>
+        <form (ngSubmit) = "onsubmit()"> <!--ngSubmit envia as informações para o banco-->
+                <div class="form-group">
+                  <label for=""></label>
+                  <input type="text" class="form-control"  placeholder="Nome" [(ngModel)] = "usuario.nome" name="nome">
+                  <small id="emailHelp" class="form-text text-muted">Nós não vamos compartilhar seu E-mail com ninguém.</small>
+                </div>
+
+                <div class="form-group">
+                        <label for=""></label>
+                        <input type="email" class="form-control"  placeholder="email" [(ngModel)] = "usuario.mail" name="email">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                      </div>
+
+                 <div class="form-group">
+                    <label for=""></label>
+                    <input type="password" class="form-control"  placeholder="Senha" [(ngModel)] = "usuario.pws" name="pws">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                 </div>
+                
+                 <div class="form-group">
+                        <label for=""></label>
+                        <input type="text" class="form-control"  placeholder="confirmar senha">         
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+                
+                <div class="form-group form-check">
+                  <button type= "submit" class="btn btn-primary"> Salvar</button>
+                  <button type= "reset" class="btn btn-primary"> cancelar</button>
+                </div>
+              </form>
+</section>
