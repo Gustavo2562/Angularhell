@@ -8,5 +8,5 @@ import { Usuario } from './model/usuario';
 })
 export class AppComponent {
   title = 'lojaAngular';
-  usuario:Array<Usuario>;
+  //usuario:Array<Usuario>;
 }
