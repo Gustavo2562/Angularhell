@@ -1,2 +1,14 @@
-<app-nav></app-nav>
-<router-outlet></router-outlet>
+<section class="container"></section>
+    <table *ngif="usuarios || async as user">
+        <tr>
+                <th> ID </th>
+                <th> Nome </th>
+                <th> E-mail</th>
+        </tr>
+        <tr     *ngFOR= "let u-of users">
+                <td>{{u.id}}</td>
+                <td>{{u.nome}}</td>
+                <td>{{u.email}}</td>        
+            </tr>
+        </table>
+    </section>

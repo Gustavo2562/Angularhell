@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Ana",
+      "email": "ana@gmail.com",
+      "pws": "11111"
+    },
+    {
+      "id": 2,
+      "nome": "Pedro",
+      "email": "pedro@gmail.com",
+      "pws": "22222"
+    },
+    {
+      "nome": "gugu",
+      "email": "gustavomaximiano1939@gmail.com",
+      "pws": "123456",
+      "id": 3
+    }
+  ]
+}
