@@ -1,27 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from'@angular/common/http';
-
+import { HttpClient } from '@angular/common/http';
 import { Produto } from '../model/produto';
-import { environment }from '../../environments/environment'
+import { environment } from '../../environments/environment'
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProdutoService {
 
-  
-    protected db = environment.serverAPI;
-
+  protected db = environment.serverAPI;
   constructor(
-    protected http: HttpClient
+    protected http:HttpClient
   ) { }
-
-  save(usuario:Produto){
-    //this.usuarios.push(usuario);
-    return this.http.post(this.db + "produto", Produto);
+  save(produtos:Produto){
+    return this.http.post(this.db + "produtos", produtos);
   }
-
-  getAll(){
+  getALL(){
     return this.http.get(this.db + "produtos");
   }
-  
 }
