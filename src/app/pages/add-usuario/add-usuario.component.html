@@ -7,6 +7,7 @@
         <small id="emailHelp" class="form-text text-muted">Nós não vamos compartilhar seu E-mail com ninguém.</small>
     </div>
 
+
       <div class="form-group">
         <label for=""></label>
         <input type="email" class="form-control"  placeholder="email" [(ngModel)] = "usuario.email" name="email" required>
@@ -24,6 +25,8 @@
       <input type="password" class="form-control"  placeholder="confirmar senha" required  #conf="ngModel" name="conf" ngModel="conf" required>      
       <small class="form-text text-danger font-weight-bold" *ngIf="pws.value != conf.value" >senhas diferentes</small>
     </div>
+
+    <app-endereco [endereco]=endereco></app-endereco>
                 
     <div class="form-group form-check">
       <button type= "submit" class="btn btn-primary" [disabled]= "fc.invalid || pws.value != conf.value">Salvar</button>

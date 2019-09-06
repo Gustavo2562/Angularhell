@@ -9,7 +9,8 @@ import { AddUsuarioComponent } from './pages/add-usuario/add-usuario.component';
 import {FormsModule} from "@angular/forms/";
 import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.component';
 import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
-import { ListProdutoComponent } from './pages/list-produto/list-produto.component'
+import { ListProdutoComponent } from './pages/list-produto/list-produto.component';
+import { CepComponent } from './pages/cep/cep.component'
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ListProdutoComponent } from './pages/list-produto/list-produto.componen
     AddUsuarioComponent,
     ListUsuarioComponent,
     ListProdutoComponent,
-    AddProdutoComponent
+    AddProdutoComponent,
+    CepComponent
   ],
   imports: [
     BrowserModule,

@@ -36,6 +36,22 @@
       "quant": 50,
       "valor": 120,
       "id": 5
+    },
+    {
+      "ativo": true,
+      "nome": "carro",
+      "descricao": "motor",
+      "quant": 2,
+      "valor": 500,
+      "id": 6
+    },
+    {
+      "ativo": true,
+      "nome": "prego",
+      "descricao": "furar",
+      "quant": 80,
+      "valor": 500,
+      "id": 7
     }
   ],
   "posts": [
