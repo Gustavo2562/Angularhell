@@ -10,7 +10,7 @@ import {FormsModule} from "@angular/forms/";
 import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.component';
 import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
 import { ListProdutoComponent } from './pages/list-produto/list-produto.component';
-import { CepComponent } from './pages/cep/cep.component'
+import { enderecoComponent } from './pages/add-endereco/endereco.component'
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { CepComponent } from './pages/cep/cep.component'
     ListUsuarioComponent,
     ListProdutoComponent,
     AddProdutoComponent,
-    CepComponent
+    enderecoComponent
   ],
   imports: [
     BrowserModule,
