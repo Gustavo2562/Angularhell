@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { enderecoComponent } from './endereco.component';
+import { EnderecoComponent } from './endereco.component';
 
 describe('enderecoComponent', () => {
-  let component: enderecoComponent;
-  let fixture: ComponentFixture<enderecoComponent>;
+  let component: EnderecoComponent;
+  let fixture: ComponentFixture<EnderecoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ enderecoComponent ]
+      declarations: [ EnderecoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(enderecoComponent);
+    fixture = TestBed.createComponent(EnderecoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

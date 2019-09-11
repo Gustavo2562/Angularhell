@@ -4,7 +4,6 @@ export class Usuario {
     uid: string;
     nome: string;
     email: string;
-    pws: string
-    endereco:Endereco = new Endereco
+    pws: string;
+    endereco: Endereco = new Endereco;
 }
-

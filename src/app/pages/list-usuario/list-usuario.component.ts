@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
+import { Usuario } from '../../model/usuario';
 
 @Component({
   selector: 'app-list-usuario',
@@ -18,4 +19,11 @@ export class ListUsuarioComponent implements OnInit {
     this.usuarios = this.usuarioService.getAll();
   }
 
+  editar(usuario:Usuario){
+    console.log(usuario);
+  }
+
+  apagar(usuario:Usuario){
+    console.log(usuario);
+  }
 }

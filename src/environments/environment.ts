@@ -4,7 +4,16 @@
 
 export const environment = {
   production: false,
-  serverAPI:"http://localhost:3000/"
+  serverAPI:"http://localhost:3000/",
+  firebaseConfig : { 
+    apiKey: "AIzaSyCx4eNBHKH1nG9HjjTgIU6EdWJvOGvMwYU",
+    authDomain: "loja-angularmax.firebaseapp.com",
+    databaseURL: "https://loja-angularmax.firebaseio.com",
+    projectId: "loja-angularmax",
+    storageBucket: "",
+    messagingSenderId: "854927933293",
+    appId: "1:854927933293:web:e56f46d2a0e70ce02e6464"
+  }
 };
 
 /*

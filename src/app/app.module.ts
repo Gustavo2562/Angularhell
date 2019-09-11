@@ -10,8 +10,11 @@ import {FormsModule} from "@angular/forms/";
 import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.component';
 import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
 import { ListProdutoComponent } from './pages/list-produto/list-produto.component';
-import { enderecoComponent } from './pages/add-endereco/endereco.component'
+import { EnderecoComponent } from './pages/add-endereco/endereco.component'
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import {AngularFireDatabaseModule} from '@angular/fire/database'
 
 @NgModule({
   declarations: [
@@ -21,13 +24,16 @@ import { enderecoComponent } from './pages/add-endereco/endereco.component'
     ListUsuarioComponent,
     ListProdutoComponent,
     AddProdutoComponent,
-    enderecoComponent
+    EnderecoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

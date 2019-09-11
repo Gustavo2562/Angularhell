@@ -24,7 +24,7 @@ export class AddUsuarioComponent implements OnInit {
     console.log(form);
 
       this.usuario.endereco = this.endereco
-      this.usuarioService.save(this.usuario).subscribe(
+      this.usuarioService.save(this.usuario).then(
       res =>{
         console.log(res);
         this.usuario = new Usuario;
