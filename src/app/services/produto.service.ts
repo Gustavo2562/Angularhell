@@ -1,54 +1,40 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AngularFireDatabase } from '@angular/fire/database';
-import { map } from 'rxjs/operators';
-
 import { Produto } from '../model/produto';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment'
+import { map } from 'rxjs/operators';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProdutoService {
 
-
-
-
   protected db = environment.serverAPI;
-
+  
   constructor(
-    protected http: HttpClient,
+    protected http:HttpClient,
     protected dbfire: AngularFireDatabase
   ) { }
-
-  save(produto: Produto) {
-    //this.produtos.push(produto);
-    //return this.http.post(this.db + "produtos", produto);
-    //return this.dbfire.object("produtos").set(produto);
-    return this.dbfire.list("produtos").push(produto);
+  save(produtos:Produto){
+    return this.dbfire.list("produtos").push(produtos);
   }
-
-  getAll() {
-    //return this.http.get(this.db + "produtos");
-    //return this.dbfire.list<Produto>("produtos").valueChanges();
-    return this.dbfire.list<Produto>("produtos").snapshotChanges()
-      .pipe(
-        map(changes =>
-          changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-        )
-      );
+  getALL(){
+    return this.dbfire.list("produtos").snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    );
   }
-
   get(key) {
     return this.dbfire.object<Produto>("produtos/" + key).valueChanges()
   }
-
   update(produto: Produto, key) {
     return this.dbfire.object<Produto>("produtos/" + key).update(produto);
   }
-
   remove(key){
     return this.dbfire.object("produtos/" + key).remove()
   }
 }
+
 
