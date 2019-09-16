@@ -9,12 +9,14 @@
             <th>Ativo</th>
         </tr>
         <tr *ngFor="let u of user">
-            <td>{{u.id}}</td>
+            <td>{{u.key}}</td>
             <td>{{u.nome}}</td>
             <td>{{u.descricao}}</td>
             <td>{{u.quant}}</td>
             <td>{{u.valor}}</td>
             <td>{{u.ativo}}</td>
+            <td (click) = "editar(p)">/</td>
+            <td (click) = "apagar(p)">x</td>
 
         </tr>
     </table>

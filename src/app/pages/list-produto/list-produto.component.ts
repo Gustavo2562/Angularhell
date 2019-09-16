@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../../services/produto.service';
+import { Produto } from 'src/app/model/produto';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list-produto',
@@ -12,10 +15,21 @@ export class ListProdutoComponent implements OnInit {
 
   constructor(
     public produtoService: ProdutoService,
+    protected router:Router
+
   ) { }
 
   ngOnInit() {
-    this.produtos = this.produtoService.getALL()
+    this.produtos = this.produtoService.getAll()
   }
 
+  editar(produto:any){ //any para n dar erro na key
+    console.log(produto.key);
+    this.router.navigate(['addUsuario', produto.key])
+  }
+
+  apagar(produto){
+    if (confirm("Apagar esse produto?"))
+    this.produtoService.remove(produto.key)
+  }
 }
