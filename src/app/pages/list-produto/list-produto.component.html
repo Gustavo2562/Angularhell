@@ -15,8 +15,11 @@
             <td>{{p.quant}}</td>
             <td>{{p.valor}}</td>
             <td>{{p.ativo}}</td>
-            <td (click) = "editar(p)">/</td>
-            <td (click) = "apagar(p)">x</td>
+            <td (click) = "editar(p)"> <i class="fa fa-edit"></i>
+            </td>
+
+            <td (click) = "apagar(p)">  <i class="fa fa-trash"></i>
+            </td>
 
         </tr>
     </table>
